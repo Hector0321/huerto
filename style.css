@@ -1,0 +1,164 @@
+:root {
+  --verde: #3a8f50;
+  --verde-claro: #c9f0d2;
+  --fondo: #f4f7f5;
+  --texto: #1a1a1a;
+  --gris: #6b6b6b;
+  --borde: #e0e0e0;
+  --radio: 12px;
+  --sombra: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  color: var(--texto);
+  background: linear-gradient(
+    135deg,
+    #d7f3ff 0%,   /* azul celeste claro */
+    #eaf7ff 40%,  /* tono intermedio */
+    #cceeff 100%  /* azul más intenso */
+  );
+  background-attachment: fixed;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.7); /* efecto suave translúcido */
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+
+.card {
+  background: #fff;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  gap: 20px;
+  background: linear-gradient(135deg, var(--verde) 40%, var(--verde-claro));
+  color: #fff;
+  padding: 20px;
+  align-items: center;
+}
+
+.thumb {
+  width: 180px;
+  height: 180px;
+  border-radius: var(--radio);
+  overflow: hidden;
+  border: 3px solid #fff;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.titles h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.titles .scientific {
+  font-style: italic;
+  color: #eafaea;
+  margin: 4px 0;
+}
+
+.titles .origin {
+  color: #f0f0f0;
+  font-size: 0.95rem;
+}
+
+main {
+  padding: 20px 30px;
+}
+
+section {
+  margin-bottom: 24px;
+}
+
+h3 {
+  color: var(--verde);
+  margin-bottom: 8px;
+}
+
+p, ul {
+  color: var(--gris);
+  line-height: 1.6;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+aside {
+  background: #f8fff9;
+  border-top: 1px solid var(--borde);
+  padding: 20px 30px;
+}
+
+aside h3 {
+  color: var(--verde);
+  margin-bottom: 10px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.chip {
+  background: var(--verde-claro);
+  color: var(--verde);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+footer {
+  background: #eafbea;
+  text-align: center;
+  padding: 12px;
+  font-size: 0.9rem;
+  color: var(--gris);
+  border-top: 1px solid var(--borde);
+}
+
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .thumb {
+    width: 150px;
+    height: 150px;
+  }
+}
